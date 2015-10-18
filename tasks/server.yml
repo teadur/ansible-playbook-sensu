@@ -52,6 +52,8 @@
     mode=0750
   notify:
     - restart sensu server
+- name: copy relays files
+  copy: src=config_relay.json dest=/etc/sensu/conf.d/relay.json
 
 - name: generate config files
   template:

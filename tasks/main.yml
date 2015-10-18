@@ -2,6 +2,7 @@
 # tasks file for sensu
 
 - include: common.yml
+  when: sensu_configure is defined
 
 - include: server.yml
   when: sensu_install_server
